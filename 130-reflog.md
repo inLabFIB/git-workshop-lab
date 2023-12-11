@@ -8,7 +8,6 @@ it is very difficult to *really* mess up things while using git.
 * Bob comes back to the computer to keep working on the novel.
 
 ```bash
-cd
 cd bob/book
 git branch
 ```

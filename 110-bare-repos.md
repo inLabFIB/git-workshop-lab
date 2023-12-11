@@ -17,6 +17,7 @@ mkdir central.git
 ```bash
 cd central.git
 git init --bare
+# Creates a repo as a storage unit (similar to what github / gitlab instantiate)
 ```
 
 * Here it is the interesting part: the new repository only contains the database, without

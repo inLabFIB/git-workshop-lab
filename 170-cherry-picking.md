@@ -10,7 +10,6 @@ update.
 * Alice selects her working area
 
 ```bash
-cd
 cd alice/book
 git status
 ```

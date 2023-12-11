@@ -45,14 +45,14 @@ cat .git/refs/heads/vocabulary-chapter-01  # It contains the same value than mai
 cat .git/refs/heads/main
 ```
 
-* Alice will replace one of the appearance of the word *beach* with the much more beautiful *sand*
+* Alice will replace the appearance of the word *beach* with the much more beautiful *sand*
 
 ```bash
 cat chapter-01.md | grep beach
-sed -z -i 's/beach/sand/2' chapter-01.md
+sed -z -i 's/beach/sand/' chapter-01.md
 cat chapter-01.md | grep -e sand -e beach -e shore -e border
 git add chapter-01.md
-git commit -m "Replacing repetitive words"
+git commit -m "Replacing beach for sand"
 git log
 ```
 
@@ -77,7 +77,18 @@ git log
 
 ## Questions
 
-* Why, just after creating the new branch, `main` and `vocabulary-chapter-01` had the same SHA-1 value?
+<details>
+<summary>
+
+Why, just after creating the new branch, `main` and `vocabulary-chapter-01` had the same SHA-1 value?
+</summary>
+
+---
+#### Solution
+
+Both point to the same commit
+---
+</details>
 
 ## Diagrams
 

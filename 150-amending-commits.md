@@ -8,7 +8,6 @@ Here, Alice will correct one of such mistakes.
 * She starts by reaching her working area
 
 ```bash
-cd
 cd alice/book
 ```
 
@@ -24,15 +23,7 @@ git checkout -b feat_headings
 * Now she will start updating the different chapters, starting with the first one:
 
 ```bash
-ed chapter-01.md << EOF
-2i
-
-## Chapter one
-.
-w
-q
-EOF
-
+sed -i '2i\## Chapter one' chapter-01.md
 cat chapter-01.md
 ```
 

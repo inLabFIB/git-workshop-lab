@@ -19,6 +19,7 @@ git diff main vocabulary-chapter-01
 
 ![Screenshot of the differences between both branches](images/050-diff-main-vocabulary.png)
 
+
 * There are some long lines, so maybe it would be better to get the difference without using `delta`.
 To deactivate it, Alice just pipes the output of `git` to another command
 

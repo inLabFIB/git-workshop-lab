@@ -7,7 +7,6 @@ Alice has added to the story. First, he will check his own repository and ensure
 he is using the main branch
 
 ```bash
-cd
 cd bob/book
 git status
 git checkout main
@@ -46,7 +45,7 @@ git remote
 
 ```bash
 git remote add origin ../../central.git
-git remote
+git remote -v
 ```
 
 * Not being completely sure of how to proceed, Bob wants to check the content of 

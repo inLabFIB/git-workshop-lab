@@ -7,9 +7,13 @@
 * Alice decides that a more fancy diff tool would provide better feedback, so she configures the [delta](https://github.com/dandavison/delta) diff tool:
 
 ```optional
-wget -P /tmp https://github.com/dandavison/delta/releases/download/0.15.1/git-delta_0.15.1_amd64.deb
-sudo dpkg -i /tmp/git-delta_0.15.1_amd64.deb
+wget -O delta.tar.gz https://github.com/dandavison/delta/releases/download/0.15.0/delta-0.15.0-x86_64-unknown-linux-gnu.tar.gz
+tar -xvf delta.tar.gz
+mkdir -p $HOME/.local/bin
+cp delta-0.15.0-x86_64-unknown-linux-gnu/delta $HOME/.local/bin/delta
+export PATH="$HOME/.local/bin:$PATH"
 delta --version
+rm -rf delta.tar.gz delta-0.15.0-x86_64-unknown-linux-gnu/
 ```
 
 * Now she needs to instruct `git` to make use of the new tool, by altering the configuration:
@@ -44,7 +48,7 @@ git diff HEAD~:chapter-01.md chapter-01.md
 ---
 </details>
 
-After comparing the two version, Alice thinks that maybe it would be more interesting to leave the description of Tim to the imagination of the reader, so he goes back in time to the previous revision
+After comparing the two version, Alice thinks that maybe it would be more interesting to leave the future of Tim to the imagination of the reader, so he goes back in time to the previous revision
 
 * She checks the current state of the working area and the value of the *HEAD* reference
 
@@ -105,7 +109,7 @@ cat chapter-01.md
 
 <details>
 <summary>
-Nah, Alice decides that it was not a good idea: Tim  has to have a particular appearance for this story to work. So Alice reverses the time traveling moving *HEAD* to the end of the line, but just for the fun she will not use the `checkout` command to do it, but an equivalent:
+Nah, Alice decides that it was not a good idea: Tim  has to have a particular background for this story to work. So Alice reverses the time traveling moving *HEAD* to the end of the line, but just for the fun she will not use the `checkout` command to do it, but an equivalent:
 
 ```bash
 git sw████ -
@@ -119,7 +123,7 @@ cat .git/HEAD
 #### Solution
 
 ```bash
-git switch -
+git switch - # Switch to the previously checkout branch
 git log
 cat chapter-01.md
 cat .git/HEAD
@@ -129,4 +133,18 @@ cat .git/HEAD
 
 ## Questions
 
-* What are the two main commands used to manipulate the position of the *HEAD* reference?
+<details>
+<summary>
+
+What are the two main commands used to manipulate the position of the *HEAD* reference?
+</summary>
+
+---
+#### Solution
+
+```bash
+git switch and git checkout
+```
+---
+</details>
+

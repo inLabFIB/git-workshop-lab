@@ -9,7 +9,6 @@ the log before merging her working branch with `main` to avoid generating noise.
 drinking coffee, she prefers to ensure she is in the correct directory:
 
 ```bash
-cd
 cd alice/book
 git status
 git log --oneline

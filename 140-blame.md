@@ -9,7 +9,6 @@ form of a spelling error.
 review the state of the book. So she goes to her repo and gets the updates
 
 ```bash
-cd
 cd alice/book
 git pull origin main
 ```
@@ -44,7 +43,6 @@ cd ../..
 chapter
 
 ```bash
-cd
 cd bob/book
 git pull origin main
 ```
