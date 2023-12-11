@@ -38,13 +38,9 @@ cat chapter-01.md
 
 ```bash
 cp chapter-01.md  chapter-01v2.md
-ed chapter-01v2.md << EOF
-2i
+cat << EOF >> chapter-01v2.md
 
-Tim is a lean and athletic young man with short brown hair and piercing blue eyes. He has a strong jawline and a sun-kissed complexion from spending so much time at the beach. His body is toned and muscular from his active lifestyle, and he exudes a sense of energy and enthusiasm for life.
-.
-w
-q
+Tim's brush with danger in the waves transformed him into a dedicated lifeguard. Passionate about water safety, he patrolled the shores, ensuring others could enjoy the ocean securely. The sea, once a perilous force, now symbolized purpose and responsibility for Tim.
 EOF
 ```
 

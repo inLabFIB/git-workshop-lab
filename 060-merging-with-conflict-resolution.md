@@ -113,25 +113,13 @@ git diff
 ```
 
 * Alice decides that she will manually correct the situation to keep both
-the *lighthouse keeper* and the *floundering* portions in the definitive version
+the *lighthouse keeper* and the *floundering* portions in the definitive version. Use a text editor (gedit, vi, vim...) to remove the merge conflict marks introduced by git and fix the merge. The second paragraph should look like the following one
 
 ```bash
-L0=$(grep -n "<<<<<<<" chapter-01.md | cut -f1 -d:)
-LF=$(grep -n ">>>>>>>" chapter-01.md | cut -f1 -d:)
-
-echo Replacing from $L0 to $LF.
-
-ed chapter-01.md << EOF
-${L0},${LF}d
-7i
-As the waves tossed him around, Tim struggled to stay afloat, fighting the waves. Just when he thought he couldn't hold on any longer, a strong hand grabbed his wrist and pulled him to safety. It was the lighthouse keeper who had noticed him floundering from the shore.
-.
-w
-q
-EOF
+As the waves tossed him around, Tim struggled to stay afloat, fighting the waves. Just when he thought he couldn't hold on any longer, a strong hand grabbed his wrist and pulled him to safety. It was the lighthouse keeper who had noticed him floundering from the waterfront.
 ```
 
-* Yes, she has it:
+* Yes, now she has it:
 
 ```bash
 cat chapter-01.md | grep -e "lighthouse keeper" -e "floundering" -C 9999

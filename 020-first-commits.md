@@ -68,13 +68,9 @@ to lose the content of the previous version:
 ```bash
 git status
 
-ed chapter-01.md << EOF
-2i
+cat << EOF >> chapter-01.md
 
-Tim is a lean and athletic young man with short brown hair and piercing blue eyes. He has a strong jawline and a sun-kissed complexion from spending so much time at the beach. His body is toned and muscular from his active lifestyle, and he exudes a sense of energy and enthusiasm for life.
-.
-w
-q
+Tim's brush with danger in the waves transformed him into a dedicated lifeguard. Passionate about water safety, he patrolled the shores, ensuring others could enjoy the ocean securely. The sea, once a perilous force, now symbolized purpose and responsibility for Tim.
 EOF
 ```
 
@@ -93,8 +89,8 @@ git diff chapter-01.md
 * Looks good, so Alice puts the new changes in the `git` database
 
 ```bash
-git add chapter-01.md
-git commit -m "Added description of Tim"
+git add --all
+git commit -m "Added future of Tim"
 git status
 ```
 
@@ -141,10 +137,8 @@ git show HEAD~:chapter-01.md
 ```
 
 <details>
-
 <summary>
 Umh... ok... and how can Alice see the differences between the current version of the chapter and the originally commited one (two revisions ago)? 
-
 
 ```bash
 git d███ HEAD~ chapter-01.md
@@ -162,9 +156,24 @@ git diff HEAD~ chapter-01.md
 
 ## Questions
 
-* What does it mean that a set of files are *untracked*?
-* Which command would allow you to access the version of `chapter-01.md` stored **two** revisions ago? And five?
+<details>
+<summary>
 
+What does it mean that a set of files are *untracked*?
+
+Which command would allow you to access the version of `chapter-01.md` stored **two** revisions ago? And five?
+</summary>
+
+---
+#### Solution
+
+```bash
+These files are not being tracked by git
+git diff HEAD~2 chapter-01.md
+git diff HEAD~5 chapter-01.md
+```
+---
+</details>
 
 ## Diagram
 
