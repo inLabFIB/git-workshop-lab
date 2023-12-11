@@ -7,7 +7,6 @@ Bob collaborates with Alice in writing the book. Both of them use the same old P
 * Bob is wise enough to know he should not mess with the work of Alice, so he creates his own directory
 
 ```bash
-cd
 mkdir bob
 cd bob
 ```

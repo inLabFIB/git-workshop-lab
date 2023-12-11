@@ -46,6 +46,7 @@ format for the log messages
 git log \
   --pretty=██████:"%h%x09%Cgreen%an%Creset%x09%s (%ah) %Cred%d%Creset" \
   --graph
+# Check this for more info about pretty formats https://git-scm.com/docs/pretty-formats
 ```
 </summary>
 
