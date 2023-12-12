@@ -48,7 +48,7 @@ would keep the commit in the log.
 
 ![The terminal showing the default interactive rebase text](images/150-rebase-01.png)
 
-* Alice chooses to `squish` (flatten) the last three commits into the first one by
+* Alice chooses to `squash` (flatten) the last three commits into the first one by
 editing the first column of those commits as pictured here:
 
 ![The terminal with the three squish commands](images/150-rebase-02.png)
