@@ -7,13 +7,13 @@
 * Alice decides that a more fancy diff tool would provide better feedback, so she configures the [delta](https://github.com/dandavison/delta) diff tool:
 
 ```optional
-wget -O delta.tar.gz https://github.com/dandavison/delta/releases/download/0.15.0/delta-0.15.0-x86_64-unknown-linux-gnu.tar.gz
+wget -O delta.tar.gz https://github.com/dandavison/delta/releases/download/0.15.0/delta-0.15.0-x86_64-unknown-linux-musl.tar.gz
 tar -xvf delta.tar.gz
 mkdir -p $HOME/.local/bin
-cp delta-0.15.0-x86_64-unknown-linux-gnu/delta $HOME/.local/bin/delta
+cp delta-0.15.0-x86_64-unknown-linux-musl/delta $HOME/.local/bin/delta
 export PATH="$HOME/.local/bin:$PATH"
 delta --version
-rm -rf delta.tar.gz delta-0.15.0-x86_64-unknown-linux-gnu/
+rm -rf delta.tar.gz delta-0.15.0-x86_64-unknown-linux-musl/
 ```
 
 * Now she needs to instruct `git` to make use of the new tool, by altering the configuration:
