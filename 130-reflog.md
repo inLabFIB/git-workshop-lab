@@ -102,7 +102,7 @@ echo The lost commit is $SHA.
 Now Bob can move `HEAD`to that commit in a new branch
 
 ```bash
-git ███████ -b wip-resurrection $SHA
+git ████████ -b wip-resurrection $SHA
 ```
 </summary>
 
