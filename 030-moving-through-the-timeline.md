@@ -11,7 +11,7 @@ wget -O delta.tar.gz https://github.com/dandavison/delta/releases/download/0.15.
 tar -xvf delta.tar.gz
 mkdir -p $HOME/.local/bin
 cp delta-0.15.0-x86_64-unknown-linux-musl/delta $HOME/.local/bin/delta
-export PATH="$HOME/.local/bin:$PATH"
+setenv PATH "$HOME/.local/bin:$PATH"
 delta --version
 rm -rf delta.tar.gz delta-0.15.0-x86_64-unknown-linux-musl/
 ```
