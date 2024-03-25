@@ -39,7 +39,7 @@ git remote
 Bob wants to check the actual address of the original repo, so he
 runs the next command
 
-```
+```bash
 git remote get-███ origin
 ```
 </summary>
@@ -47,7 +47,7 @@ git remote get-███ origin
 ---
 #### Solution
 
-```
+```bash
 git remote get-url origin
 ```
 ---
@@ -65,7 +65,3 @@ cat .git/config
 git config user.name Bob
 git config user.email bob@example.com
 ```
-
-## Diagrams
-
-![A diagram showing both repos](images/080-cloning-repositories.png)
