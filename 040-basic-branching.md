@@ -16,7 +16,6 @@ git status
 git branch                          # show branches
 git c███████ vocabulary-chapter-01  # move HEAD to the new branch
 git status
-git branch                          # show branches
 ```
 </summary>
 
@@ -31,7 +30,6 @@ git status
 git branch
 git checkout vocabulary-chapter-01
 git status
-git branch
 ```
 ---
 
@@ -73,23 +71,3 @@ git add chapter-01.md
 git commit -m "Introducing the lighthouse keeper"
 git log
 ```
-
-
-## Questions
-
-<details>
-<summary>
-
-Why, just after creating the new branch, `main` and `vocabulary-chapter-01` had the same SHA-1 value?
-</summary>
-
----
-#### Solution
-
-Both point to the same commit
----
-</details>
-
-## Diagrams
-
-![Diagram depicting the two branches](images/040-basic-branching.png)

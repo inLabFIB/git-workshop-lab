@@ -48,7 +48,7 @@ git log --oneline --graph --decorate \
 
 * And it is stored internally as another type of *ref*:
 
-```
+```bash
 ls .git/refs/tags
 ```
 
@@ -61,7 +61,7 @@ cat .git/refs/heads/main  # points to the same object than the tag
 
 <details>
 <summary>
-Ouch: Alice realizes that she used a **lightweight tag**, but she would like to set a comment. 
+Ouch: Alice realizes that she used a **lightweight tag**, but she would like to include a comment. 
 So she deletes the previously created tag:
 
 ```bash
@@ -118,7 +118,3 @@ cat .git/refs/tags/v1      # the tag ref points to a tag object, so doesn't matc
 ```bash
 cd ../../
 ```
-
-## Diagrams
-
-![A diagram showing the tag object](images/070-tagging.png)
