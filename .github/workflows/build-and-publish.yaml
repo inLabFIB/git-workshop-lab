@@ -44,7 +44,7 @@ jobs:
       - name: Checkout theme
         uses: actions/checkout@v3
         with:
-          repository: 'ciberado/hugo-lab-theme-ananke'
+          repository: 'thematrix97/hugo-lab-theme-ananke'
           path: 'gitworkshop/themes/ananke'
 
       - name: Setup theme
