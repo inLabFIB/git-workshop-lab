@@ -7,7 +7,6 @@ Our preferred writer is back, and having read Bob's message she decides to merge
 * First, she jumps into her workspace
 
 ```bash
-cd
 cd alice/book
 ```
 
@@ -15,7 +14,6 @@ cd alice/book
 
 ```bash
 git status
-ls
 ```
 
 * But Alice can confirm there is a new branch in her repo
@@ -28,12 +26,6 @@ git branch
 
 ```bash
 git merge wip-chapter-02
-```
-
-* Ok, there it is the promised new chapter
-
-```bash
-ls
 ```
 
 <details>

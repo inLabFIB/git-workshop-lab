@@ -109,7 +109,7 @@ cat chapter-01.md
 
 <details>
 <summary>
-Nah, Alice decides that it was not a good idea: Tim  has to have a particular background for this story to work. So Alice reverses the time traveling moving *HEAD* to the end of the line, but just for the fun she will not use the `checkout` command to do it, but an equivalent:
+Nah, Alice decides that it was not a good idea: Tim  has to have a particular background for this story to work. So Alice reverses the time traveling moving *HEAD* to the end of the line, but just for fun, she will not use the `checkout` command to do it, but an equivalent specific for branches:
 
 ```bash
 git sw████ -
@@ -127,23 +127,6 @@ git switch - # Switch to the previously checkout branch
 git log
 cat chapter-01.md
 cat .git/HEAD
-```
----
-</details>
-
-## Questions
-
-<details>
-<summary>
-
-What are the two main commands used to manipulate the position of the *HEAD* reference?
-</summary>
-
----
-#### Solution
-
-```bash
-git switch and git checkout
 ```
 ---
 </details>

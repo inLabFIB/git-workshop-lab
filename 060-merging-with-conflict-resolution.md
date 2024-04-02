@@ -115,7 +115,7 @@ git diff
 * Alice decides that she will manually correct the situation to keep both
 the *lighthouse keeper* and the *floundering* portions in the definitive version. Use a text editor (gedit, vi, vim...) to remove the merge conflict marks introduced by git and fix the merge. The second paragraph should look like the following one
 
-```bash
+```text
 As the waves tossed him around, Tim struggled to stay afloat, fighting the waves. Just when he thought he couldn't hold on any longer, a strong hand grabbed his wrist and pulled him to safety. It was the lighthouse keeper who had noticed him floundering from the waterfront.
 ```
 
@@ -133,12 +133,8 @@ git add chapter-01.md
 git commit -m "Solved conflict, merged keeper and floundering."
 ```
 
-* The resulting history is pretty cool. Both the content of the chapter and the log ;)
+* The resulting history is pretty cool. Both the content of the chapter and the git log
 
 ```bash
 git log --graph --decorate --oneline
 ```
-
-## Diagrams
-
-![A picture of the current state of the graph](images/060-merging-with-conflict-resolution.png)

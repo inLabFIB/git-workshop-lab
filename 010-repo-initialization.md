@@ -27,37 +27,7 @@ From that day forward, Tim's love for the ocean only grew stronger. But he never
 EOF
 ```
 
-* Review the magnificent piece of art that Alice has written:
-
-```bash
-ls
-cat chapter-01.md
-```
-
-* Alice wants to enhance the description of the protagonist, but she is afraid of not being satisfied with the result. Because of that, she decides to work on a copy of the original content:
-
-```bash
-cp chapter-01.md  chapter-01v2.md
-cat << EOF >> chapter-01v2.md
-
-Tim's brush with danger in the waves transformed him into a dedicated lifeguard. Passionate about water safety, he patrolled the shores, ensuring others could enjoy the ocean securely. The sea, once a perilous force, now symbolized purpose and responsibility for Tim.
-EOF
-```
-
-* Let's check the current content of the disk:
-
-```bash
-ls
-cat chapter-01v2.md
-```
-
-* She quickly realizes that this tactic isn't practical at all. Luckily, Alice main job is developing software, so she is well versed on `git` and knows how to apply the tool to her other profession. First, she removes the copy:
-
-```bash
-rm chapter-01v2.md
-```
-
-* And she initializes the `git` database with
+* Alice realizes that they will need a version control for this book, so she initializes the `git` database with
 
 ```bash
 git config --global init.defaultBranch main

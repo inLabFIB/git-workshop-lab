@@ -8,7 +8,6 @@ Alice is going to create a repository intended to have only the data, without an
 bare repos directory name ends with `.git`:
 
 ```bash
-cd
 mkdir central.git
 ```
 
@@ -21,13 +20,7 @@ git init --bare
 ```
 
 * Here it is the interesting part: the new repository only contains the database, without
-a working directory
-
-```bash
-ls
-```
-
-* Now Alice can go back to her own repo and configure a remote reference to the bare one
+a working directory. Now Alice can go back to her own repo and configure a remote reference to the bare one
 
 ```bash
 cd ../alice/book
@@ -60,6 +53,8 @@ He knew it was silly to be afraid of something that didn't exist, but he couldn'
 As he lay in bed, trying to calm his racing thoughts, Tim made a decision. He would set out to learn as much as he could about the sea and the creatures that dwelled within it. If there was any truth to his dreams, he wanted to be prepared. And he knew where to start his investigation.
 EOF
 
+```
+```bash
 ls
 git add chapter-03.md
 git commit -m "New chapter"
@@ -71,7 +66,3 @@ git push origin main
 ```bash
 cd ../..
 ```
-
-## Diagrams
-
-![A diagram showing different repositories in a centralized strategy](images/110-bare-repos.png)

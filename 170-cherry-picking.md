@@ -32,8 +32,7 @@ EOF
 * She checks that everything is in place and commits the file
 
 ```bash 
-ls
-
+git status
 git add about-authors.md
 git commit -m "Created first draft of the authors biography."
 ```
@@ -59,7 +58,8 @@ cat << EOF > summary.md
 
 Tim's story follows a young person who has always been captivated by the ocean. During a fateful encounter while swimming, Tim is saved from a dangerous current by a mysterious lighthouse keeper named John. As they connect, Tim discovers John's own enigmatic experiences with the sea's secrets, leading him to question the meaning behind his haunting nightmares of malevolent mermaids. Drawn by a sense of wonder and curiosity, Tim sets out on a journey to understand the mysteries of the ocean and the potential connection he shares with it. The story explores the mystical allure of the sea, unraveling the depths of imagination and reality.
 EOF
-
+```
+```bash
 git add summary.md
 git commit -m "First draft of the summary"
 ```
@@ -69,8 +69,6 @@ she changes to the main branch to write additional content
 
 ```bash
 git switch main
-
-ls
 ```
 
 * The next chapter is important, as it introduces the second protagonist of the book
@@ -92,7 +90,7 @@ git add chapter-05.md
 git commit -m "Introduction of the mermaid protagonist"
 ```
 
-* Umh... now she realizes that there is an inconsistency there:
+* Umh... now she realizes that there is an inconsistency with the chapter naming:
 
 ```bash
 cat chapter*.md | grep Chapter
@@ -105,7 +103,7 @@ do so, she starts by finding the commit that implemented the change set
 git log feat-meta --oneline
 ```
 
-* Located: it is the one that contains the message "*Updated titles to figures*". Alice knows
+* Found!: it is the one that contains the message "*Updated titles to figures*". Alice knows
 that is possible to use the commit message instead of the commit id in many places:
 
 ```bash
@@ -145,7 +143,3 @@ git log --oneline --graph
 ```bash
 cat chapter*.md | grep Chapter
 ```
-
-## Diagrams
-
-![Cherry pick command diagram](images/170-cherry-picking.png)

@@ -78,7 +78,3 @@ git log --oneline --graph
 git checkout main
 git merge feat_headings
 ```
-
-## Diagrams
-
-![Diagram with four commits being squashed into one](images/160-history-simplification.png)

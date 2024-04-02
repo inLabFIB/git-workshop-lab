@@ -5,7 +5,7 @@ so she will *merge* the vocabulary branch with the main one.
 
 ## Lab
 
-* First, she checks that she is in the `main` branch
+* First, she verifies that she is in the `main` branch
 
 ```bash
 git branch
@@ -53,27 +53,9 @@ and more convenient to simplify the output of the log
 git log --oneline
 ```
 
-<details>
-<summary>
-* And once we start to merging different branches, it is always nice to be able
-to see the different timelines of our project visually:
+* Once we start to merging different branches, it is always nice to be able
+to see the different timelines of our project visually
 
 ```bash
-git log --oneline --gr███
+git log --graph
 ```
-</summary>
-
----
-#### Solution
-
-```bash
-git log --oneline --graph
-```
-
----
-</details>
-
-## Diagrams
-
-![Diagram of a merge without conflict](images/050-merging-without-conficts.png)
-

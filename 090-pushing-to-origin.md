@@ -16,8 +16,8 @@ As they made their way back to the shore, the lighthouse keeper introduced himse
 
 As they said their goodbyes, John turned to Tim with a twinkle in his eye. "Have you ever heard of the mermaids?" he asked, his voice filled with mystery.
 EOF
-
-ls
+```
+```bash
 git add chapter-02.md
 git status
 git commit -m "Added chapter 2."
@@ -64,7 +64,3 @@ git log --oneline --decorate \
 ```bash
 cd ../../
 ```
-
-## Diagrams
-
-![A diagram showing both repos and the new commits](images/090-pushing-to-origin.png)

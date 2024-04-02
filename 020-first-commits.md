@@ -39,30 +39,10 @@ git log
 
 ```bash
 cat .git/HEAD
-cat .git/refs/heads/main     # Whole sha-1 HEAD
+cat .git/refs/heads/main     # Whole SHA-1 HEAD
 ```
 
-<details>
-<summary>
-Actually, there are several ways to get the value stored in a
-reference. What would be the best way to programmatically 
-retrieve the SHA-1 of the current revision?
-
-```bash
-git rev-p████ HEAD
-```
-</summary>
-
----
-#### Solution
-
-```bash
-git rev-parse HEAD
-```
----
-</details>
-
-* Now Alice can safely apply the new paragraph to the text, without any fear
+* Now Alice can safely apply a new paragraph to the text, without any fear
 to lose the content of the previous version:
 
 ```bash
@@ -82,7 +62,7 @@ git status
 
 * The author is interested to check what are the differences (the *changesets*) between the current *working area* and the *commited revision*.
 
-```
+```bash
 git diff chapter-01.md
 ```
 
@@ -131,7 +111,6 @@ git show $PREV_REVISION:chapter-01.md
 
 * Although, in the end, she knows it is easier to just use the symbolic reference name:
 
-
 ```bash
 git show HEAD~:chapter-01.md
 ```
@@ -153,28 +132,3 @@ git diff HEAD~ chapter-01.md
 ```
 ---
 </details>
-
-## Questions
-
-<details>
-<summary>
-
-What does it mean that a set of files are *untracked*?
-
-Which command would allow you to access the version of `chapter-01.md` stored **two** revisions ago? And five?
-</summary>
-
----
-#### Solution
-
-```bash
-These files are not being tracked by git
-git diff HEAD~2 chapter-01.md
-git diff HEAD~5 chapter-01.md
-```
----
-</details>
-
-## Diagram
-
-![Picture of a diagram explaining the current repo configuration](images/020-first-commits.jpg)

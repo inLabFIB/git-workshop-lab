@@ -69,9 +69,6 @@ git branch -D wip-chapter-02
 * Wait a second... umh... just after pressing the `enter` key, Bob realizes he has
 done a mistake: the fourth chapter was in the deleted branch!
 
-```bash
-ls
-```
 
 * A quick `log` command doesn't show any trace of the lost chapter!
 
@@ -99,7 +96,7 @@ echo The lost commit is $SHA.
 
 <details>
 <summary>
-Now Bob can move `HEAD`to that commit in a new branch
+Now Bob can move the `HEAD` reference to that commit in a new branch
 
 ```bash
 git ████████ -b wip-resurrection $SHA
