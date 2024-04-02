@@ -51,11 +51,14 @@ jobs:
         run: |
           echo "theme = 'ananke'" >> ./gitworkshop/hugo.toml
       - name: Setup renderer
-        run: |
-          echo "[markup]" >> ./gitworkshop/hugo.toml
-          echo "  [markup.goldmark]" >> ./gitworkshop/hugo.toml
-          echo "    [markup.goldmark.renderer]" >> ./gitworkshop/hugo.toml
-          echo "      unsafe = true" >> ./gitworkshop/hugo.toml
+        run: cat << EOF >> ./gitworkshop/hugo.toml
+          [params]
+            subtitle = 'Git fundamentals'
+          [markup]
+            [markup.goldmark]
+              [markup.goldmark.renderer]
+                unsafe = true
+          EOF
 
       - name: Show configuration
         run: |
