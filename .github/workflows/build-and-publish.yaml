@@ -51,7 +51,8 @@ jobs:
         run: |
           echo "theme = 'ananke'" >> ./gitworkshop/hugo.toml
       - name: Setup renderer
-        run: cat << EOF >> ./gitworkshop/hugo.toml
+        run: |
+          cat << EOF >> ./gitworkshop/hugo.toml
           [params]
             subtitle = 'Git fundamentals'
           [markup]
